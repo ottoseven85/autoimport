@@ -1231,6 +1231,9 @@
     background: #25D366;
     color: #fff;
   }
+   .sticky-wa img {
+    margin-top: 4px;
+  }
   .sticky-wa:hover {
     transform: scale(1.1);
     box-shadow: 0 12px 40px rgba(37, 211, 102, 0.45);
