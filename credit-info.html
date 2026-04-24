@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кредит на пригон автомобиля — AutoPrime</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/autoprime.css">
+</head>
+<body>
+
+<header>
+  <div class="layout-shell--header">
+    <a href="index.html#top" class="logo">AUTO<span>PRIME</span></a>
+    <div class="header-nav-wrapp">
+      <nav class="header-nav">
+        <a href="index.html#cars">Автомобили</a>
+        <a href="index.html#howit">Как это работает</a>
+        <a href="index.html#countries">Страны</a>
+        <a href="index.html#calc">Калькулятор</a>
+        <a href="index.html#contact">Контакты</a>
+      </nav>
+      <a href="index.html#top" class="btn btn-outline">На главную</a>
+      <button class="btn btn-primary" onclick="openModal()">Оставить заявку на кредит</button>
+    </div>
+    
+    <div class="burger">
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<main class="page-simple">
+  <div class="layout-shell page-simple__inner">
+    <a href="index.html#credit" class="back-link">← Блок «Кредит» на главной</a>
+    <h1>Кредит на пригон автомобиля</h1>
+    <p class="lead">Кратко о программах кредитования при покупке авто из США, Кореи и Китая через AutoPrime. Точные условия фиксируются в договоре и в предложении банка.</p>
+
+    <section>
+      <h2>1. Партнёрские банки</h2>
+      <p>Мы сотрудничаем с несколькими банками. Конкретный банк и программа подбираются после проверки вашей заявки и параметров автомобиля.</p>
+    </section>
+
+    <section>
+      <h2>2. Параметры (ориентиры)</h2>
+      <ul>
+        <li>Процентная ставка — от 7.9% годовых (зависит от продукта банка и профиля заёмщика).</li>
+        <li>Срок кредита — до 7 лет (до 84 месяцев).</li>
+        <li>Первоначальный взнос — от 20% от стоимости авто под кредит.</li>
+        <li>Предварительное решение — часто в день обращения; финальное одобрение — до 24 часов при полном пакете документов.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Документы</h2>
+      <p>Обычно требуются: паспорт гражданина РФ, ИНН, справка о доходах. Перечень может отличаться в зависимости от банка — менеджер подскажет актуальный список.</p>
+    </section>
+
+    <section>
+      <h2>4. Как оформить</h2>
+      <p>Оставьте заявку на сайте или запросите консультацию: мы подберём авто, согласуем сумму и направим документы в банк. Кредит оформляется на юридически чистую сделку по договору купли-продажи / поставки.</p>
+    </section>
+
+    <section>
+      <h2>5. Пример расчёта</h2>
+      <p>Стоимость авто $28 500, взнос 20% ($5 700), сумма кредита $22 800, ставка 9.9% годовых, срок 60 месяцев — ориентировочный платёж около $480 в месяц. Расчёт не является публичной офертой.</p>
+    </section>
+
+    <section>
+      <h2>6. Контакты</h2>
+      <p>Вопросы по кредиту: <a href="tel:#">+995 123 456 789</a>, <a href="mailto:info@autoprime.ru">info@autoprime.ru</a>, или раздел <a href="index.html#contact">контакты</a> на главной странице.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="layout-shell" style="padding: 32px 0 48px;">
+    <div class="footer-inner" style="display: flex; justify-content: center;">
+      <button class="btn btn-primary" onclick="openModal()">Оставить заявку на кредит</button>
+    </div>
+    <p style="font-size: 0.82rem; color: var(--muted); line-height: 1.6; text-align: center;">
+      © 2026 AutoPrime ·
+      <a href="privacy.html" style="color: var(--accent);">Конфиденциальность</a> ·
+      <a href="credit-info.html" style="color: var(--accent);">Кредит</a> ·
+      <a href="index.html" style="color: var(--accent);">Главная</a>
+    </p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <form class="modal" id="modalForm" method="POST">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</h3>
+    <p>Оставьте номер телефона — менеджер перезвонит в течение 15 минут</p>
+    <div class="form-group" style="margin-bottom:16px;" id="fg-mname">
+      <label>Имя</label>
+      <input type="text" name="name" id="mname" placeholder="Ваше имя" autocomplete="name">
+      <div class="field-error" id="err-mname">Укажите имя</div>
+    </div>
+    <div class="form-group" style="margin-bottom:24px;" id="fg-mphone">
+      <label>Телефон</label>
+      <input type="tel" name="phone" class="phone-input" id="mphone" placeholder="+995 ___-__-__" autocomplete="tel">
+      <div class="field-error" id="err-mphone">Укажите корректный номер</div>
+    </div>
+    <button type="submit" class="btn btn-primary pulse" style="width:100%; justify-content:center;">Перезвоните мне →</button>
+    <div class="success-msg" id="modalSuccess">✅ Спасибо! Мы свяжемся с вами в ближайшее время.</div>
+  </form>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/send-form.js"></script>
+<script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.header-nav-wrapp');
+
+  if (burger && nav) {
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      nav.classList.toggle('active');
+      document.body.classList.toggle('lock');
+    });
+
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('a')) {
+        burger.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.classList.remove('lock');
+      }
+    });
+
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoPrime — Пригон авто из США, Кореи, Китая</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/autoprime.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="layout-shell--header">
+    <a href="#top" class="logo">AUTO<span>PRIME</span></a>
+    <div class="header-nav-wrapp">
+      <nav class="header-nav">
+        <a href="#cars">Автомобили</a>
+        <a href="#howit">Как это работает</a>
+        <a href="#countries">Страны</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <a href="credit-info.html" class="btn btn-secondary">Кредит</a>
+      <button class="btn btn-primary" onclick="openModal()">Обратный звонок</button>
+    </div>
+    <div class="burger">
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-photo" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1920&amp;q=85&amp;fm=jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-grid-fine" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span> Авто из США под ключ</div>
+      <div class="hero-line" aria-hidden="true"></div>
+      <h1>
+        Авто из<br>
+        <span class="accent">США,</span> <span class="stroke">Кореи</span><br>
+        и Китая
+      </h1>
+      <p class="hero-sub">Подбор, проверка, покупка, доставка, растаможка и постановка на учёт - под ключ.</p>
+      <div class="hero-ctas">
+        <a href="#calc" class="btn btn-primary pulse">Рассчитать стоимость</a>
+        <a href="#cars" class="btn btn-outline">Смотреть авто в наличии</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">850<span>+</span></div>
+          <div class="stat-label">Авто привезено</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">6<span> лет</span></div>
+          <div class="stat-label">На рынке</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">98<span>%</span></div>
+          <div class="stat-label">Довольных клиентов</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero-showcase" aria-label="Примеры автомобилей из США">
+      <div class="hero-showcase-ring" aria-hidden="true"></div>
+      <div class="hero-showcase-main">
+        <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=900&amp;q=85&amp;fm=jpg" alt="Tesla — пример авто из США" width="900" height="675" loading="eager" decoding="async" referrerpolicy="no-referrer">
+        <div class="hero-showcase-caption">
+          <span>USA · доставка</span>
+          <span>Electric</span>
+        </div>
+      </div>
+      <div class="hero-float hero-float--a">
+        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500&amp;q=85&amp;fm=jpg" alt="BMW — пример из США" width="500" height="333" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      </div>
+      <div class="hero-float hero-float--b">
+        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?w=500&amp;q=85&amp;fm=jpg" alt="Премиальный SUV из США" width="500" height="333" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker">
+    <span class="ticker-item">🇺🇸 USA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇰🇷 KOREA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇨🇳 CHINA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">AUCTIONS <span class="ticker-dot"></span></span>
+    <span class="ticker-item">LOANS <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇺🇸 USA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇰🇷 KOREA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇨🇳 CHINA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">AUCTIONS <span class="ticker-dot"></span></span>
+    <span class="ticker-item">LOANS <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇺🇸 USA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇰🇷 KOREA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇨🇳 CHINA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">AUCTIONS <span class="ticker-dot"></span></span>
+    <span class="ticker-item">LOANS <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇺🇸 USA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇰🇷 KOREA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🇨🇳 CHINA <span class="ticker-dot"></span></span>
+    <span class="ticker-item">AUCTIONS <span class="ticker-dot"></span></span>
+    <span class="ticker-item">LOANS <span class="ticker-dot"></span></span>
+  </div>
+</div>
+
+<!-- CARS SLIDER -->
+<section class="cars-section" id="cars">
+  <div class="layout-shell">
+  <div class="section-head">
+    <div class="section-label">Авто в наличии</div>
+    <h2>ГОТОВЫ К ПРОДАЖЕ</h2>
+    <p>Растаможенные авто с документами, готовые к постановке на учёт</p>
+  </div>
+
+  <div class="slider-container">
+    <div class="slider-track" id="sliderTrack">
+
+      <div class="car-card" onclick="openModal()">
+        <div class="car-img">
+          <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Tesla Model 3, США" width="900" height="500" loading="lazy">
+          <span class="car-badge-country">🇺🇸 США</span>
+          <span class="car-badge-hot">В наличии</span>
+        </div>
+        <div class="car-info">
+          <div class="car-name">Tesla Model 3</div>
+          <div class="car-year">2022 · Long Range · Electric</div>
+          <div class="car-specs">
+            <div class="spec"><span class="spec-val">358</span><span class="spec-key">л.с.</span></div>
+            <div class="spec"><span class="spec-val">Auto</span><span class="spec-key">КПП</span></div>
+            <div class="spec"><span class="spec-val">48K</span><span class="spec-key">км</span></div>
+          </div>
+          <div class="car-prices">
+            <div class="price-block">
+              <div class="price-label">Стоимость под ключ</div>
+              <div class="price-val">$28 500</div>
+              <div class="price-sub">Растаможен</div>
+            </div>
+            <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openModal()">
+        <div class="car-img">
+          <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="BMW X5, США" width="900" height="500" loading="lazy">
+          <span class="car-badge-country">🇺🇸 США</span>
+        </div>
+        <div class="car-info">
+          <div class="car-name">BMW M5 </div>
+          <div class="car-year">2021 · M Sport Package</div>
+          <div class="car-specs">
+            <div class="spec"><span class="spec-val">340</span><span class="spec-key">л.с.</span></div>
+            <div class="spec"><span class="spec-val">Auto</span><span class="spec-key">КПП</span></div>
+            <div class="spec"><span class="spec-val">62K</span><span class="spec-key">км</span></div>
+          </div>
+          <div class="car-prices">
+            <div class="price-block">
+              <div class="price-label">Стоимость под ключ</div>
+              <div class="price-val">$44 900</div>
+              <div class="price-sub">Растаможен</div>
+            </div>
+            <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openModal()">
+        <div class="car-img">
+          <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Hyundai Tucson, Корея" width="900" height="500" loading="lazy">
+          <span class="car-badge-country">🇰🇷 Корея</span>
+          <span class="car-badge-hot">Хит</span>
+        </div>
+        <div class="car-info">
+          <div class="car-name">Mercedes Benz GT</div>
+          <div class="car-year">2023 · AMG GT · Bi - Turbo</div>
+          <div class="car-specs">
+            <div class="spec"><span class="spec-val">630</span><span class="spec-key">л.с.</span></div>
+            <div class="spec"><span class="spec-val">DCT</span><span class="spec-key">КПП</span></div>
+            <div class="spec"><span class="spec-val">120K</span><span class="spec-key">км</span></div>
+          </div>
+          <div class="car-prices">
+            <div class="price-block">
+              <div class="price-label">Стоимость под ключ</div>
+              <div class="price-val">$32 700</div>
+              <div class="price-sub">Растаможен</div>
+            </div>
+            <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openModal()">
+        <div class="car-img">
+          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Ford Mustang GT, США" width="900" height="500" loading="lazy">
+          <span class="car-badge-country">🇺🇸 США</span>
+        </div>
+        <div class="car-info">
+          <div class="car-name">Ford Mustang GT</div>
+          <div class="car-year">2022 · 5.0 V8 · Premium</div>
+          <div class="car-specs">
+            <div class="spec"><span class="spec-val">450</span><span class="spec-key">л.с.</span></div>
+            <div class="spec"><span class="spec-val">Auto</span><span class="spec-key">КПП</span></div>
+            <div class="spec"><span class="spec-val">28K</span><span class="spec-key">км</span></div>
+          </div>
+          <div class="car-prices">
+            <div class="price-block">
+              <div class="price-label">Стоимость под ключ</div>
+              <div class="price-val">$38 200</div>
+              <div class="price-sub">Растаможен</div>
+            </div>
+            <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openModal()">
+        <div class="car-img">
+          <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Электромобиль, Китай" width="900" height="500" loading="lazy">
+          <span class="car-badge-country">🇨🇳 Китай</span>
+          <span class="car-badge-hot">Новинка</span>
+        </div>
+        <div class="car-info">
+          <div class="car-name">BYD Seal AWD</div>
+          <div class="car-year">2024 · Electric · Top</div>
+          <div class="car-specs">
+            <div class="spec"><span class="spec-val">530</span><span class="spec-key">л.с.</span></div>
+            <div class="spec"><span class="spec-val">Auto</span><span class="spec-key">КПП</span></div>
+            <div class="spec"><span class="spec-val">700</span><span class="spec-key">км/зар</span></div>
+          </div>
+          <div class="car-prices">
+            <div class="price-block">
+              <div class="price-label">Стоимость под ключ</div>
+              <div class="price-val">$36 500</div>
+              <div class="price-sub">Растаможен</div>
+            </div>
+            <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" onclick="openModal()">
+        <div class="car-img">
+          <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?w=900&amp;q=85&amp;fm=jpg" alt="Cadillac Escalade, США" width="900" height="500" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+          <span class="car-badge-country">🇺🇸 США</span>
+        </div>
+        <div class="car-info">
+          <div class="car-name">Cadillac Escalade</div>
+          <div class="car-year">2021 · 6.2 V8 · Premium Luxury</div>
+          <div class="car-specs">
+            <div class="spec"><span class="spec-val">420</span><span class="spec-key">л.с.</span></div>
+            <div class="spec"><span class="spec-val">Auto</span><span class="spec-key">КПП</span></div>
+            <div class="spec"><span class="spec-val">54K</span><span class="spec-key">км</span></div>
+          </div>
+          <div class="car-prices">
+            <div class="price-block">
+              <div class="price-label">Стоимость под ключ</div>
+              <div class="price-val">$72 000</div>
+              <div class="price-sub">Растаможен</div>
+            </div>
+            <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="slider-nav">
+    <button type="button" class="slider-btn" id="prevBtn" aria-label="Предыдущий слайд">←</button>
+    <div class="slider-dots" id="dots" role="tablist" aria-label="Слайды каталога"></div>
+    <button type="button" class="slider-btn" id="nextBtn" aria-label="Следующий слайд">→</button>
+  </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="howit">
+  <div class="layout-shell">
+  <div class="section-head">
+    <div class="section-label">Процесс</div>
+    <h2>КАК МЫ РАБОТАЕМ</h2>
+    <p>Шесть этапов: от консультации до передачи ключей. Весь процесс — 30–60 дней, авто с документами под ключ.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-icon">💬</div>
+      <h3>Консультация</h3>
+      <p>Обсуждаем ваши пожелания: марка, бюджет, страна. Подбираем оптимальный вариант.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-icon">🔍</div>
+      <h3>Поиск и аукцион</h3>
+      <p>Ищем авто на Copart, IAAI, корейских и китайских платформах. Проверяем историю и состояние.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-icon">📋</div>
+      <h3>Договор и аванс</h3>
+      <p>Заключаем договор и фиксируем бюджет, этапы оплаты и сроки доставки.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-icon">🚢</div>
+      <h3>Отправка</h3>
+      <p>Организуем транспортировку морем или сушей. Страхование груза включено в стоимость.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">05</div>
+      <div class="step-icon">🛃</div>
+      <h3>Таможня</h3>
+      <p>Полное таможенное оформление. Рассчитываем все пошлины заранее — без сюрпризов.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">06</div>
+      <div class="step-icon">🔑</div>
+      <h3>Передача ключей</h3>
+      <p>Вы получаете авто с полным пакетом документов. Помогаем поставить на учёт.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- COUNTRIES -->
+<section class="countries-section" id="countries">
+  <div class="layout-shell">
+  <div class="section-head">
+    <div class="section-label">Направления</div>
+    <h2>ОТКУДА ПРИГОНЯЕМ</h2>
+    <p>Прямые контракты с дилерами и аукционами в трёх странах</p>
+  </div>
+  <div class="countries-grid">
+    <div class="country-card usa">
+      <span class="country-flag">🇺🇸</span>
+      <div class="country-name">США</div>
+      <p class="country-desc">Самый популярный рынок. Авто с аукционов Copart и IAAI — огромный выбор, прозрачная история, конкурентные цены. Японские, европейские и американские марки.</p>
+      <ul class="country-features">
+        <li>Аукционы Copart & IAAI</li>
+        <li>Проверка по Carfax / AutoCheck</li>
+        <li>Средний срок доставки: 45–55 дней</li>
+        <li>Итоговая стоимость заметнее ниже европейского рынка</li>
+        <li>Tesla, Ford, Cadillac, BMW, Lexus</li>
+      </ul>
+    </div>
+    <div class="country-card korea">
+      <span class="country-flag">🇰🇷</span>
+      <div class="country-name">Корея</div>
+      <p class="country-desc">Корейские авто — идеальный баланс качества и цены. Часто ниже пробег, отличное техническое состояние. Hyundai, Kia, Genesis с корейской комплектацией.</p>
+      <ul class="country-features">
+        <li>Аукционы Encar & SK Encar</li>
+        <li>Пробеги от 10 до 80 тыс. км</li>
+        <li>Средний срок доставки: 30–40 дней</li>
+        <li>Hyundai, Kia, Genesis, Ssangyong</li>
+        <li>Полные опции за меньшие деньги</li>
+      </ul>
+    </div>
+    <div class="country-card china">
+      <span class="country-flag">🇨🇳</span>
+      <div class="country-name">Китай</div>
+      <p class="country-desc">Новый тренд авторынка. Передовые электромобили и гибриды с отличными характеристиками по ценам на 20–40% ниже европейских аналогов.</p>
+      <ul class="country-features">
+        <li>BYD, Chery, Geely, Li Auto, NIO</li>
+        <li>Электро и гибридные модели</li>
+        <li>Средний срок доставки: 35–45 дней</li>
+        <li>Новые авто с завода</li>
+        <li>Гарантия производителя</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- CREDIT -->
+<section class="credit-section" id="credit">
+  <div class="layout-shell">
+  <div class="credit-inner">
+    <div class="credit-text">
+      <div class="section-label">Финансирование</div>
+      <h2>АВТО В КРЕДИТ</h2>
+      <p>Работаем с ведущими банками. Одобрение за 24 часа, минимальный пакет документов.</p>
+      <div class="credit-benefits">
+        <div class="credit-benefit">
+          <div class="cb-icon">⚡</div>
+          <div class="cb-text">
+            <h4>Быстрое одобрение</h4>
+            <p>Предварительное решение в день обращения. Финальное — в течение 24 часов.</p>
+          </div>
+        </div>
+        <div class="credit-benefit">
+          <div class="cb-icon">📉</div>
+          <div class="cb-text">
+            <h4>Низкие ставки</h4>
+            <p>От 7.9% годовых. Специальные программы для зарплатных клиентов банков-партнёров.</p>
+          </div>
+        </div>
+        <div class="credit-benefit">
+          <div class="cb-icon">📅</div>
+          <div class="cb-text">
+            <h4>До 7 лет</h4>
+            <p>Срок кредитования до 84 месяцев. Комфортный ежемесячный платёж.</p>
+          </div>
+        </div>
+        <div class="credit-benefit">
+          <div class="cb-icon">📄</div>
+          <div class="cb-text">
+            <h4>Минимум документов</h4>
+            <p>Паспорт, ИНН, справка о доходах. Помогаем собрать пакет документов.</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="openModal()">Подать заявку на кредит</button>
+    </div>
+    <div class="credit-visual">
+      <div class="credit-calc-title">Пример расчёта кредита</div>
+      <div class="calc-row">
+        <span class="calc-key">Стоимость авто</span>
+        <span class="calc-val">$28 500</span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-key">Первоначальный взнос (20%)</span>
+        <span class="calc-val">$5 700</span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-key">Сумма кредита</span>
+        <span class="calc-val">$22 800</span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-key">Ставка</span>
+        <span class="calc-val">9.9% годовых</span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-key">Срок</span>
+        <span class="calc-val">60 месяцев</span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-key">Ежемесячный платёж</span>
+        <span class="calc-val big">~$480</span>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- SHIPPING CALC -->
+<section class="calc-section" id="calc">
+  <div class="layout-shell">
+  <div class="section-head section-head--center" style="margin-bottom: 48px;">
+    <div class="section-label">Онлайн калькулятор</div>
+    <h2>СТОИМОСТЬ ПРИГОНА</h2>
+    <p>Рассчитайте ориентировочную стоимость доставки и таможенной очистки</p>
+  </div>
+  <div class="calc-wrapper">
+    <div class="calc-grid">
+      <div class="form-group">
+        <label>Страна</label>
+        <select id="cCountry" onchange="calcShipping()">
+          <option value="usa">🇺🇸 США</option>
+          <option value="korea">🇰🇷 Корея</option>
+          <option value="china">🇨🇳 Китай</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Стоимость авто ($)</label>
+        <input type="number" id="cPrice" value="15000" oninput="calcShipping()" placeholder="напр. 15000">
+      </div>
+      <div class="form-group">
+        <label>Объём двигателя (л)</label>
+        <input type="number" id="cEngine" value="2.0" step="0.1" min="0" oninput="calcShipping()" placeholder="напр. 2.0">
+      </div>
+      <div class="form-group">
+        <label>Тип двигателя</label>
+        <select id="cEngineType" onchange="calcShipping()">
+          <option value="petrol">ДВС</option>
+          <option value="hybrid">Гибрид</option>
+          <option value="electric">Електро</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Год выпуска</label>
+        <select id="cYear" onchange="calcShipping()">
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+        </select>
+      </div>
+    </div>
+    <div class="calc-result" id="calcResult">
+      <div class="result-item">
+        <div class="result-label">Доставка</div>
+        <div class="result-val" id="rShipping">$1 800</div>
+      </div>
+      <div class="result-item">
+        <div class="result-label">Таможня + пошлины</div>
+        <div class="result-val" id="rCustoms">$4 200</div>
+      </div>
+      <div class="result-item">
+        <div class="result-label">Итого под ключ</div>
+        <div class="result-val" id="rTotal">$21 000</div>
+      </div>
+    </div>
+    <p style="margin-top: 16px; font-size:.78rem; color: var(--muted); text-align:center;">* Расчёт ориентировочный. Точную стоимость уточняйте у менеджера.</p>
+    <div style="text-align:center; margin-top: 24px;">
+      <button class="btn btn-primary" onclick="openModal()">Получить точный расчёт</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="layout-shell">
+  <div class="section-head">
+    <div class="section-label">Почему мы</div>
+    <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🛡️</div>
+      <h3>Гарантия сделки</h3>
+      <p>Договор с фиксированной стоимостью. Вы знаете все расходы до отправки денег.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📡</div>
+      <h3>Онлайн-трекинг</h3>
+      <p>Следите за авто на каждом этапе через личный кабинет или Telegram-бот.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚙️</div>
+      <h3>Техническая проверка</h3>
+      <p>Осмотр перед покупкой, проверка по базам, фотоотчёт. Никаких сюрпризов.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <h3>Прозрачные цены</h3>
+      <p>Никаких скрытых комиссий. Все расходы прописаны в договоре заранее.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🤝</div>
+      <h3>Поддержка 24/7</h3>
+      <p>Менеджер на связи в мессенджерах. Отвечаем в течение 15 минут.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📂</div>
+      <h3>Ключи под руку</h3>
+      <p>Полный пакет документов и помощь с постановкой на учёт.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="layout-shell">
+  <div class="section-head">
+    <div class="section-label">Отзывы</div>
+    <h2>КЛИЕНТЫ О НАС</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <div class="review-text">Привёз Tesla Model 3 из Штатов. Ребята сопровождали на каждом этапе, всё чётко и прозрачно. Итоговая сумма совпала с договором. Очень доволен!</div>
+      <div class="review-author">
+        <div class="review-avatar">АК</div>
+        <div>
+          <div class="review-name">Андрей Ковалёв</div>
+          <div class="review-car">Tesla Model 3 · 2022 · США</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <div class="review-text">Заказывал Hyundai Tucson из Кореи. Доставили за 38 дней, состояние отличное, пробег именно тот, что обещали. Уже рекомендую всем друзьям.</div>
+      <div class="review-author">
+        <div class="review-avatar">МС</div>
+        <div>
+          <div class="review-name">Марина Сидоренко</div>
+          <div class="review-car">Hyundai Tucson · 2023 · Корея</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-quote">"</div>
+      <div class="review-text">Оформили кредит прямо через них. Всё быстро, никакой беготни — за день дали одобрение. Теперь езжу на BYD Seal и плачу комфортный платёж.</div>
+      <div class="review-author">
+        <div class="review-avatar">ВГ</div>
+        <div>
+          <div class="review-name">Василий Гриценко</div>
+          <div class="review-car">BYD Seal · 2024 · Китай</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="layout-shell">
+  <div class="section-head section-head--center">
+    <div class="section-label">FAQ</div>
+    <h2>ЧАСТЫЕ ВОПРОСЫ</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item open">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Сколько времени занимает пригон авто из США?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">В среднем 45–55 дней: 10–15 дней на поиск и покупку, 25–35 дней морская доставка, 7–10 дней таможня и оформление документов. Срок зависит от загруженности таможни и штата отправки в США.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Какие документы нужны для оформления пригона?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">Паспорт гражданина РФ и ИНН. Всё остальное — договор, таможенные декларации, сертификат соответствия — наши специалисты оформляют самостоятельно.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Можно ли купить битый автомобиль с аукциона?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">Да, это один из самых выгодных вариантов. Битый автомобиль с незначительными повреждениями после восстановления обходится на 30–50% дешевле рыночной цены. Наши специалисты оценивают реальный ущерб до покупки.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Какие таможенные пошлины нужно платить?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">Зависит от года выпуска, объёма двигателя и стоимости авто. Основные платежи: акциз, НДС, таможенная пошлина и сбор. Точный расчёт вам предоставит менеджер после указания параметров авто — всё фиксируется в договоре.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Безопасно ли отправлять деньги?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">Мы работаем по официальному договору. Платёж разбит на части: аванс после подбора авто, оплата аукциона после его проверки, таможенные платежи — по факту. Деньги отправляются на официальные счета. За 6 лет работы — ни одного случая потери средств клиента.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        Доступен ли кредит на пригонные авто?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">Да. Мы сотрудничаем с несколькими банками-партнёрами. Ставка от 7.9%, срок до 7 лет, первый взнос от 20%. Одобрение — в течение 24 часов. Помогаем подготовить все документы для банка.</div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="layout-shell">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-label">Связаться</div>
+      <h2>ПОЛУЧИТЕ КОНСУЛЬТАЦИЮ</h2>
+      <p>Менеджер ответит в течение 15 минут и подберёт авто под ваш бюджет и задачи.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="ci-icon">📞</div>
+          <div>
+            <div class="ci-label">Телефон</div>
+            <div class="ci-val">+995 123 45 67</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">💬</div>
+          <div>
+            <div class="ci-label">Telegram / WhatsApp</div>
+            <div class="ci-val">@autoprime_ru</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">📧</div>
+          <div>
+            <div class="ci-label">Email</div>
+            <div class="ci-val">info@autoprime.ru</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-label">Адрес</div>
+            <div class="ci-val">Город: Tbilisi, Grigol Robakidze Ave 22b</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" id="mainForm" method="POST">
+      <h3>ОСТАВИТЬ ЗАЯВКУ</h3>
+      <div class="form-row">
+        <div class="form-group" id="fg-fname">
+          <label>Имя</label>
+          <input type="text" name="name" id="fname" placeholder="Ваше имя" autocomplete="name">
+          <div class="field-error" id="err-fname">Укажите имя (не менее 2 символов)</div>
+        </div>
+        <div class="form-group" id="fg-fphone">
+          <label>Телефон</label>
+          <input type="tel" name="phone" class="phone-input" id="fphone" placeholder="+995 ___-__-__" autocomplete="tel">
+          <div class="field-error" id="err-fphone">Укажите корректный номер телефона</div>
+        </div>
+      </div>
+      <div class="form-group" style="margin-top: 16px;">
+        <label>Какой автомобиль вас интересует?</label>
+        <input type="text" id="fcar" placeholder="Марка, модель, год, бюджет">
+      </div>
+      <div class="form-group" style="margin-top: 16px;">
+        <label>Комментарий</label>
+        <textarea id="fcomment" placeholder="Дополнительные пожелания…"></textarea>
+      </div>
+      <div class="form-submit-row">
+        <button type="submit" class="btn btn-primary" style="flex-shrink:0;">Отправить заявку →</button>
+      </div>
+      <div class="success-msg" id="successMsg">✅ Заявка принята! Менеджер свяжется с вами в течение 15 минут.</div>
+      <p style="margin-top: 16px; font-size: .76rem; color: var(--muted);">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" style="color:var(--accent)">политикой конфиденциальности</a></p>
+    </form>
+  </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="layout-shell">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#top" class="logo">AUTO<span>PRIME</span></a>
+      <p>Привоз автомобилей из США, Кореи и Китая. Официально, прозрачно, под ключ.</p>
+      <div class="socials">
+        <div class="social-btn">📱</div>
+        <div class="social-btn">💬</div>
+        <div class="social-btn">📸</div>
+        <div class="social-btn">▶️</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Услуги</h4>
+      <a href="#countries">Привоз из США</a>
+      <a href="#countries">Привоз из Кореи</a>
+      <a href="#countries">Привоз из Китая</a>
+      <a href="credit-info.html">Авто в кредит</a>
+      <a href="#calc">Таможенное оформление</a>
+    </div>
+    <div class="footer-col">
+      <h4>Компания</h4>
+      <a href="#why">О нас</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">FAQ</a>
+       <a href="#calc">Калькулятор</a>
+      <a href="#contact">Контакты и заявка</a>
+    </div>
+    <div class="footer-col">
+      <h4>Информация</h4>
+      <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="credit-info.html">Кредит — условия</a>
+      <a href="#howit">Как это работает</a>
+      <a href="#faq">FAQ</a>
+      <a href="#cars">Авто в наличии</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 AutoPrime. Все права защищены.</span>
+    <span>Лицензия таможенного брокера №МБ-12345</span>
+  </div>
+  </div>
+</footer>
+
+<!-- STICKY -->
+<div class="sticky-cta">
+  <a href="https://wa.me/79991234567" class="sticky-btn sticky-wa" title="WhatsApp">💬</a>
+  <a href="tel:+79991234567" class="sticky-btn sticky-call" title="Позвонить">📞</a>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <form class="modal" id="modalForm" method="POST">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</h3>
+    <p>Оставьте номер телефона — менеджер перезвонит в течение 15 минут</p>
+    <div class="form-group" style="margin-bottom:16px;" id="fg-mname">
+      <label>Имя</label>
+      <input type="text" name="name" id="mname" placeholder="Ваше имя" autocomplete="name">
+      <div class="field-error" id="err-mname">Укажите имя</div>
+    </div>
+    <div class="form-group" style="margin-bottom:24px;" id="fg-mphone">
+      <label>Телефон</label>
+      <input type="tel" name="phone" class="phone-input" id="mphone" placeholder="+995 ___-__-__" autocomplete="tel">
+      <div class="field-error" id="err-mphone">Укажите корректный номер</div>
+    </div>
+    <button type="submit" class="btn btn-primary pulse" style="width:100%; justify-content:center;">Перезвоните мне →</button>
+    <div class="success-msg" id="modalSuccess">✅ Спасибо! Мы свяжемся с вами в ближайшее время.</div>
+  </form>
+</div>
+
+<div class="cookie-modal" id="cookieModal">
+  <div class="cookie-box">
+    <p>
+      Ми используем файли cookie для улучшения работи сайта.
+    </p>
+
+    <div class="cookie-actions">
+      <button id="acceptCookies" class="btn-primary">Принять</button>
+      <button id="declineCookies" class="btn-outline">Отклонить</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js" defer></script>
+<script src="js/send-form.js"></script>
+<script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.header-nav-wrapp');
+
+  if (burger && nav) {
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      nav.classList.toggle('active');
+      document.body.classList.toggle('lock');
+    });
+
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('a')) {
+        burger.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.classList.remove('lock');
+      }
+    });
+
+  }
+</script>
+</body>
+</html>
