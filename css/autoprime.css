@@ -587,7 +587,7 @@
   }
 
   .car-card {
-    width: 100%;
+    max-width: 100%;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -1496,6 +1496,10 @@
     .section-head p {
       font-size: 0.92rem;
       margin-top: 12px;
+    }
+
+    .modal h3 {
+      font-size: 18px;
     }
 
     h2 {
