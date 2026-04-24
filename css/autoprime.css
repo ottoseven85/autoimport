@@ -1497,7 +1497,10 @@
       font-size: 0.92rem;
       margin-top: 12px;
     }
-
+    .modal {
+      padding: 36px 24px;
+      width: 94%;
+    }
     .modal h3 {
       font-size: 18px;
     }
