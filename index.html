@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/autoprime.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 
@@ -120,16 +121,16 @@
 <!-- CARS SLIDER -->
 <section class="cars-section" id="cars">
   <div class="layout-shell">
-  <div class="section-head">
-    <div class="section-label">Авто в наличии</div>
-    <h2>ГОТОВЫ К ПРОДАЖЕ</h2>
-    <p>Растаможенные авто с документами, готовые к постановке на учёт</p>
-  </div>
+    <div class="section-head">
+      <div class="section-label">Авто в наличии</div>
+      <h2>ГОТОВЫ К ПРОДАЖЕ</h2>
+      <p>Растаможенные авто с документами, готовые к постановке на учёт</p>
+    </div>
 
-  <div class="slider-container">
-    <div class="slider-track" id="sliderTrack">
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
 
-      <div class="car-card" onclick="openModal()">
+      <!-- <div class="car-card" onclick="openModal()">
         <div class="car-img">
           <img src="img/tesla.jpeg" alt="Tesla Model 3, США" width="900" height="500" loading="lazy">
           <span class="car-badge-country">🇺🇸 США</span>
@@ -274,15 +275,185 @@
             <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
           </div>
         </div>
+      </div> -->
+
+      <div class="swiper mySwiper">
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <div class="car-card" onclick="openModal()">
+              <div class="car-img">
+                <img src="img/tesla.jpeg" alt="Tesla Model 3, США" width="900" height="500" loading="lazy">
+                <span class="car-badge-country">🇺🇸 США</span>
+                <span class="car-badge-hot">В наличии</span>
+              </div>
+              <div class="car-info">
+                <div class="car-name">Tesla Model 3</div>
+                <div class="car-year">2022 · Long Range · Electric</div>
+                <div class="car-specs">
+                  <div class="spec"><span class="spec-val">358</span><span class="spec-key">л.с.</span></div>
+                  <div class="spec"><span class="spec-val">Auto</span><span class="spec-key">КПП</span></div>
+                  <div class="spec"><span class="spec-val">48K</span><span class="spec-key">км</span></div>
+                </div>
+                <div class="car-prices">
+                  <div class="price-block">
+                    <div class="price-label">Стоимость под ключ</div>
+                    <div class="price-val">$28 500</div>
+                    <div class="price-sub">Растаможен</div>
+                  </div>
+                  <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="car-card" onclick="openModal()">
+              <div class="car-img">
+                <img src="img/bmw.jpeg" alt="BMW X5, США" width="900" height="500" loading="lazy">
+                <span class="car-badge-country">🇺🇸 США</span>
+              </div>
+              <div class="car-info">
+                <div class="car-name">BMW M5 </div>
+                <div class="car-year">2021 · M Sport Package</div>
+                <div class="car-specs">
+                  <div class="spec"><span class="spec-val">340</span><span class="spec-key">л.с.</span></div>
+                  <div class="spec"><span class="spec-val">Auto</span><span class="spec-key">КПП</span></div>
+                  <div class="spec"><span class="spec-val">62K</span><span class="spec-key">км</span></div>
+                </div>
+                <div class="car-prices">
+                  <div class="price-block">
+                    <div class="price-label">Стоимость под ключ</div>
+                    <div class="price-val">$44 900</div>
+                    <div class="price-sub">Растаможен</div>
+                  </div>
+                  <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="car-card" onclick="openModal()">
+              <div class="car-img">
+                <img src="img/mersedes.avif" alt="Hyundai Tucson, Корея" width="900" height="500" loading="lazy">
+                <span class="car-badge-country">🇰🇷 Корея</span>
+                <span class="car-badge-hot">Хит</span>
+              </div>
+              <div class="car-info">
+                <div class="car-name">Mercedes Benz GT</div>
+                <div class="car-year">2023 · AMG GT · Bi - Turbo</div>
+                <div class="car-specs">
+                  <div class="spec"><span class="spec-val">630</span><span class="spec-key">л.с.</span></div>
+                  <div class="spec"><span class="spec-val">DCT</span><span class="spec-key">КПП</span></div>
+                  <div class="spec"><span class="spec-val">120K</span><span class="spec-key">км</span></div>
+                </div>
+                <div class="car-prices">
+                  <div class="price-block">
+                    <div class="price-label">Стоимость под ключ</div>
+                    <div class="price-val">$32 700</div>
+                    <div class="price-sub">Растаможен</div>
+                  </div>
+                  <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="car-card" onclick="openModal()">
+              <div class="car-img">
+                <img src="img/ferarri.jpeg" alt="Ford Mustang GT, США" width="900" height="500" loading="lazy">
+                <span class="car-badge-country">🇺🇸 США</span>
+              </div>
+              <div class="car-info">
+                <div class="car-name">Ford Mustang GT</div>
+                <div class="car-year">2022 · 5.0 V8 · Premium</div>
+                <div class="car-specs">
+                  <div class="spec"><span class="spec-val">450</span><span class="spec-key">л.с.</span></div>
+                  <div class="spec"><span class="spec-val">Auto</span><span class="spec-key">КПП</span></div>
+                  <div class="spec"><span class="spec-val">28K</span><span class="spec-key">км</span></div>
+                </div>
+                <div class="car-prices">
+                  <div class="price-block">
+                    <div class="price-label">Стоимость под ключ</div>
+                    <div class="price-val">$38 200</div>
+                    <div class="price-sub">Растаможен</div>
+                  </div>
+                  <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="car-card" onclick="openModal()">
+              <div class="car-img">
+                <img src="img/tesla-card.avif" alt="Электромобиль, Китай" width="900" height="500" loading="lazy">
+                <span class="car-badge-country">🇨🇳 Китай</span>
+                <span class="car-badge-hot">Новинка</span>
+              </div>
+              <div class="car-info">
+                <div class="car-name">BYD Seal AWD</div>
+                <div class="car-year">2024 · Electric · Top</div>
+                <div class="car-specs">
+                  <div class="spec"><span class="spec-val">530</span><span class="spec-key">л.с.</span></div>
+                  <div class="spec"><span class="spec-val">Auto</span><span class="spec-key">КПП</span></div>
+                  <div class="spec"><span class="spec-val">700</span><span class="spec-key">км/зар</span></div>
+                </div>
+                <div class="car-prices">
+                  <div class="price-block">
+                    <div class="price-label">Стоимость под ключ</div>
+                    <div class="price-val">$36 500</div>
+                    <div class="price-sub">Растаможен</div>
+                  </div>
+                  <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="car-card" onclick="openModal()">
+              <div class="car-img">
+                <img src="img/range.jpeg" alt="Cadillac Escalade, США" width="900" height="500" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+                <span class="car-badge-country">🇺🇸 США</span>
+              </div>
+              <div class="car-info">
+                <div class="car-name">Cadillac Escalade</div>
+                <div class="car-year">2021 · 6.2 V8 · Premium Luxury</div>
+                <div class="car-specs">
+                  <div class="spec"><span class="spec-val">420</span><span class="spec-key">л.с.</span></div>
+                  <div class="spec"><span class="spec-val">Auto</span><span class="spec-key">КПП</span></div>
+                  <div class="spec"><span class="spec-val">54K</span><span class="spec-key">км</span></div>
+                </div>
+                <div class="car-prices">
+                  <div class="price-block">
+                    <div class="price-label">Стоимость под ключ</div>
+                    <div class="price-val">$72 000</div>
+                    <div class="price-sub">Растаможен</div>
+                  </div>
+                  <a href="#" class="btn btn-primary" role="button" style="font-size:.8rem; padding:10px 18px;" onclick="event.preventDefault(); event.stopPropagation(); openModal();">Получить расчет</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Пагінація -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Стрілки -->
+        <div class="swiper-nav">
+          <div class="swiper-button-prev custom-prev"></div>
+          <div class="swiper-button-next custom-next"></div>
+        </div>
+
       </div>
 
     </div>
   </div>
-  <div class="slider-nav">
+  <!-- <div class="slider-nav">
     <button type="button" class="slider-btn" id="prevBtn" aria-label="Предыдущий слайд">←</button>
     <div class="slider-dots" id="dots" role="tablist" aria-label="Слайды каталога"></div>
     <button type="button" class="slider-btn" id="nextBtn" aria-label="Следующий слайд">→</button>
-  </div>
+  </div> -->
   </div>
 </section>
 
@@ -824,7 +995,7 @@
     </div>
   </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/main.js" defer></script>
 <script src="js/send-form.js"></script>
 <script>
@@ -848,6 +1019,45 @@
     });
 
   }
+</script>
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    spaceBetween: 20,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.custom-next',
+      prevEl: '.custom-prev',
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      480: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      960: {
+        slidesPerView: 3
+      },
+      1200: {
+        slidesPerView: 4
+      }
+    }
+  });
 </script>
 </body>
 </html>

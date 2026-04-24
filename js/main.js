@@ -2,64 +2,64 @@
   const cardWidth = 404; // 380 + 24 gap
 
   // SLIDER
-  let slideIndex = 0;
-  const track = document.getElementById('sliderTrack');
-  const dotsEl = document.getElementById('dots');
+  // let slideIndex = 0;
+  // const track = document.getElementById('sliderTrack');
+  // const dotsEl = document.getElementById('dots');
 
-  function sliderCardCount() {
-    return document.querySelectorAll('.car-card').length;
-  }
+  // function sliderCardCount() {
+  //   return document.querySelectorAll('.car-card').length;
+  // }
 
-  function sliderVisible() {
-    const container = document.querySelector('.slider-container');
-    if (!container) return 1;
-    return Math.max(1, Math.floor(container.offsetWidth / cardWidth));
-  }
+  // function sliderVisible() {
+  //   const container = document.querySelector('.slider-container');
+  //   if (!container) return 1;
+  //   return Math.max(1, Math.floor(container.offsetWidth / cardWidth));
+  // }
 
-  function sliderMax() {
-    return Math.max(0, sliderCardCount() - sliderVisible());
-  }
+  // function sliderMax() {
+  //   return Math.max(0, sliderCardCount() - sliderVisible());
+  // }
 
-  function renderSliderDots() {
-    if (!dotsEl) return;
-    const max = sliderMax();
-    dotsEl.innerHTML = '';
-    for (let i = 0; i <= max; i++) {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'dot' + (i === slideIndex ? ' active' : '');
-      b.setAttribute('aria-label', 'Слайд ' + (i + 1) + ' из ' + (max + 1));
-      b.addEventListener('click', () => goSlide(i));
-      dotsEl.appendChild(b);
-    }
-  }
+  // function renderSliderDots() {
+  //   if (!dotsEl) return;
+  //   const max = sliderMax();
+  //   dotsEl.innerHTML = '';
+  //   for (let i = 0; i <= max; i++) {
+  //     const b = document.createElement('button');
+  //     b.type = 'button';
+  //     b.className = 'dot' + (i === slideIndex ? ' active' : '');
+  //     b.setAttribute('aria-label', 'Слайд ' + (i + 1) + ' из ' + (max + 1));
+  //     b.addEventListener('click', () => goSlide(i));
+  //     dotsEl.appendChild(b);
+  //   }
+  // }
 
-  function goSlide(n) {
-    const max = sliderMax();
-    slideIndex = Math.max(0, Math.min(n, max));
-    if (track) track.style.transform = 'translateX(-' + (slideIndex * cardWidth) + 'px)';
-    if (!dotsEl) return;
-    dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === slideIndex));
-  }
+  // function goSlide(n) {
+  //   const max = sliderMax();
+  //   slideIndex = Math.max(0, Math.min(n, max));
+  //   if (track) track.style.transform = 'translateX(-' + (slideIndex * cardWidth) + 'px)';
+  //   if (!dotsEl) return;
+  //   dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === slideIndex));
+  // }
 
-  function nextSlideAuto() {
-    const max = sliderMax();
-    goSlide(slideIndex >= max ? 0 : slideIndex + 1);
-  }
+  // function nextSlideAuto() {
+  //   const max = sliderMax();
+  //   goSlide(slideIndex >= max ? 0 : slideIndex + 1);
+  // }
 
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  if (prevBtn) prevBtn.addEventListener('click', () => goSlide(slideIndex - 1));
-  if (nextBtn) nextBtn.addEventListener('click', () => nextSlideAuto());
+  // const prevBtn = document.getElementById('prevBtn');
+  // const nextBtn = document.getElementById('nextBtn');
+  // if (prevBtn) prevBtn.addEventListener('click', () => goSlide(slideIndex - 1));
+  // if (nextBtn) nextBtn.addEventListener('click', () => nextSlideAuto());
 
-  function initSlider() {
-    slideIndex = Math.min(slideIndex, sliderMax());
-    renderSliderDots();
-    goSlide(slideIndex);
-  }
-  initSlider();
-  window.addEventListener('resize', initSlider);
-  setInterval(nextSlideAuto, 4000);
+  // function initSlider() {
+  //   slideIndex = Math.min(slideIndex, sliderMax());
+  //   renderSliderDots();
+  //   goSlide(slideIndex);
+  // }
+  // initSlider();
+  // window.addEventListener('resize', initSlider);
+  // setInterval(nextSlideAuto, 4000);
 
   // FAQ
   function toggleFaq(el) {

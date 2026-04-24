@@ -500,9 +500,80 @@
     gap: 24px;
     transition: transform .5s cubic-bezier(.4,0,.2,1);
   }
+  /* контейнер */
+  .mySwiper {
+    padding-bottom: 60px;
+  }
+  /* пагінація вниз */
+  .swiper-pagination {
+    bottom: 0 !important;
+  }
 
+  /* блок навігації під слайдом */
+  .swiper-nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* прибираємо дефолтні стрілки */
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none;
+  }
+
+  /* кастом стрілки */
+  .custom-prev,
+  .custom-next {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  /* іконки */
+  .custom-prev::before,
+  .custom-next::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+  }
+
+  /* стрілка вліво */
+  .custom-prev::before {
+    transform: rotate(-135deg);
+  }
+
+  /* стрілка вправо */
+  .custom-next::before {
+    transform: rotate(45deg);
+  }
+
+  /* hover */
+  .custom-prev:hover,
+  .custom-next:hover {
+    background: #e63946;
+  }
+
+  /* пагінація */
+  .swiper-pagination-bullet {
+    background: #999;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #e63946;
+  }
   .car-card {
-    min-width: 380px;
+    /* min-width: 380px; */
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -1379,6 +1450,11 @@
       padding: 6px 12px;
       letter-spacing: 1.2px;
     }
+    .hero-ctas a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
     .hero-stats {
       padding: 16px 14px;
       gap: 12px;
@@ -1422,7 +1498,7 @@
       padding: 0 28px;
     }
 
-    .car-card { min-width: 260px; }
+    .car-card { min-width: 360px; }
     .car-info { padding: 16px; }
     .car-name { font-size: 1.45rem; }
 
