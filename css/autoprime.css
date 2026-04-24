@@ -97,8 +97,9 @@
     transition: color .2s;
   }
   nav a:hover { color: var(--white); }
-
-  
+  .layout-shell--header .burger {
+      display: none;
+  }
   .btn {
     display: inline-flex;
     align-items: center;
