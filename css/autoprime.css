@@ -502,34 +502,43 @@
   }
   /* контейнер */
   .mySwiper {
-    padding-bottom: 60px;
+    padding-bottom: 60px !important;
   }
   /* пагінація вниз */
   .swiper-pagination {
-    bottom: 0 !important;
+    bottom: 25px !important;
   }
-
+  .swiper-pagination-bullet {
+    background: #999 !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: var(--accent) !important;
+  }
   /* блок навігації під слайдом */
   .swiper-nav {
-    margin-top: 20px;
+    margin: 20px auto 0;
     display: flex;
     justify-content: center;
     gap: 20px;
+    position: relative;
+    max-width: 280px;
   }
 
   /* прибираємо дефолтні стрілки */
   .swiper-button-prev::after,
   .swiper-button-next::after {
     display: none;
+    position: absolute;
   }
 
   /* кастом стрілки */
   .custom-prev,
   .custom-next {
-    width: 44px;
-    height: 44px;
+    width: 48px !important;
+    height: 48px !important;
     border-radius: 50%;
-    background: #111;
+    background: var(--card);
+    border: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -541,8 +550,8 @@
   .custom-prev::before,
   .custom-next::before {
     content: '';
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
   }
@@ -550,17 +559,21 @@
   /* стрілка вліво */
   .custom-prev::before {
     transform: rotate(-135deg);
+    margin-left: 3px;
   }
 
   /* стрілка вправо */
   .custom-next::before {
     transform: rotate(45deg);
+    margin-right: 3px;
   }
 
   /* hover */
   .custom-prev:hover,
   .custom-next:hover {
-    background: #e63946;
+    background: var(--accent); 
+    color: var(--black); 
+    border-color: var(--accent);
   }
 
   /* пагінація */
@@ -572,8 +585,9 @@
   .swiper-pagination-bullet-active {
     background: #e63946;
   }
+
   .car-card {
-    /* min-width: 380px; */
+    min-width: 370px;  
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -682,7 +696,7 @@
   }
   .price-sub { font-size: .75rem; color: var(--muted); margin-top: 2px; }
 
-  .slider-nav {
+  /* .slider-nav {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -723,7 +737,7 @@
     flex-shrink: 0;
   }
   .dot:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .dot.active { background: var(--accent); width: 24px; border-radius: 4px; }
+  .dot.active { background: var(--accent); width: 24px; border-radius: 4px; } */
 
   /* ── HOW IT WORKS ── */
   .steps-grid {

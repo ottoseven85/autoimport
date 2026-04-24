@@ -1,5 +1,5 @@
 
-  const cardWidth = 404; // 380 + 24 gap
+  // const cardWidth = 404; // 380 + 24 gap
 
   // SLIDER
   // let slideIndex = 0;
