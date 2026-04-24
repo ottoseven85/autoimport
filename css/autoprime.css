@@ -498,7 +498,7 @@
   .slider-track {
     display: flex;
     gap: 24px;
-    transition: transform .5s cubic-bezier(.4,0,.2,1);
+    /* transition: transform .5s cubic-bezier(.4,0,.2,1); */
   }
   /* контейнер */
   .mySwiper {
@@ -587,7 +587,7 @@
   }
 
   .car-card {
-    min-width: 370px;  
+    width: 100%;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -1512,7 +1512,7 @@
       padding: 0 28px;
     }
 
-    .car-card { min-width: 360px; }
+    /* .car-card { max-width: 100%; } */
     .car-info { padding: 16px; }
     .car-name { font-size: 1.45rem; }
 
